@@ -1,10 +1,8 @@
 from conans import ConanFile, CMake
 import os
 
-
 channel = os.getenv("CONAN_CHANNEL", "testing")
 username = os.getenv("CONAN_USERNAME", "popescu-af")
-
 
 class SvgdomTestConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
@@ -23,4 +21,4 @@ class SvgdomTestConan(ConanFile):
 
     def test(self):
         os.chdir("bin")
-        self.run(".%sexample" % os.sep)
+        self.run(".%ssvgdom_test" % os.sep)

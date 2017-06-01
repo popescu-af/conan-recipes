@@ -32,9 +32,9 @@ class SvgdomConan(ConanFile):
     version = "0.2.32"
     license = "MIT"
     url = "https://github.com/popescu-af/conan-recipes"
-    svgdom_url = "https://github.com/igagis/svgdom.git"
+    git_url = "https://github.com/igagis/svgdom.git"
     settings = "os", "compiler", "build_type", "arch"
-    requires = "pugixml/1.7@a_teammate/testing"
+    requires = "pugixml/1.7@a_teammate/testing", "papki/1.0.39@popescu-af/testing"
     build_policy = "missing"
     options = {"shared": [True, False]}
     default_options = "shared=False"
@@ -46,7 +46,7 @@ class SvgdomConan(ConanFile):
         self.options["pugixml"].shared = self.options.shared
 
     def source(self):
-        self.run("git clone %s" % (self.svgdom_url))
+        self.run("git clone %s" % (self.git_url))
         self.run("cd svgdom && git checkout 0.2.32")
         # Create CMakeLists.txt file
         with open("CMakeLists.txt", "w") as f:
