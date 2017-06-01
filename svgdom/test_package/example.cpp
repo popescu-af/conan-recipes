@@ -5,7 +5,8 @@ int main()
 {
     using namespace svgdom;
 
-    Length l;
-    l.unit = Length::Unit_e::CM;
+    Rectangle r;
+    r.attribsToStream(std::cout);
+
     return 0;
 }

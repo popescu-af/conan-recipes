@@ -31,7 +31,8 @@ class SvgdomConan(ConanFile):
     name = "svgdom"
     version = "0.2.32"
     license = "MIT"
-    url = "<Package recipe repository url here, for issues about the package>"
+    url = "https://github.com/popescu-af/conan-recipes"
+    svgdom_url = "https://github.com/igagis/svgdom.git"
     settings = "os", "compiler", "build_type", "arch"
     requires = "pugixml/1.7@a_teammate/testing"
     build_policy = "missing"
@@ -41,11 +42,11 @@ class SvgdomConan(ConanFile):
 
     def configure(self):
         # pugixml/1.7@a_teammate/testing conanfile.py does not handle shared builds now,
-        # but this line will be useful when this is fixed.
+        # but this line will be useful when/if this is fixed.
         self.options["pugixml"].shared = self.options.shared
 
     def source(self):
-        self.run("git clone https://github.com/igagis/svgdom.git")
+        self.run("git clone %s" % (self.svgdom_url))
         self.run("cd svgdom && git checkout 0.2.32")
         # Create CMakeLists.txt file
         with open("CMakeLists.txt", "w") as f:
