@@ -59,7 +59,7 @@ class SvgdomConan(ConanFile):
         self.run("cmake --build . %s" % cmake.build_config)
 
     def package(self):
-        self.copy("*.hpp", dst="include", src="svgdom/src/svgdom")
+        self.copy("*.hpp", dst="include/svgdom", src="svgdom/src/svgdom")
         self.copy("*svgdom.lib", dst="lib", keep_path=False)
         self.copy("*.dll", dst="bin", keep_path=False)
         self.copy("*.so", dst="lib", keep_path=False)
