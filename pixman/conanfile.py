@@ -1,5 +1,5 @@
 from conans import ConanFile, CMake, tools
-import os, shutil
+import os
 
 cmakelists_txt="""\
 project(pixman LANGUAGES C)

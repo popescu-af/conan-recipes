@@ -10,10 +10,10 @@ class SvgdomTestConan(ConanFile):
     generators = "cmake"
 
     def build(self):
-        cmake = CMake(self.settings)
+        cmake = CMake(self)
         # Current dir is "test_package/build/<build_id>" and CMakeLists.txt is in "test_package"
-        cmake.configure(self, source_dir=self.conanfile_directory, build_dir="./")
-        cmake.build(self)
+        cmake.configure(source_dir=self.conanfile_directory, build_dir="./")
+        cmake.build()
 
     def imports(self):
         self.copy("*.dll", "bin", "bin")

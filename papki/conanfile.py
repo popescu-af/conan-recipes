@@ -7,6 +7,10 @@ cmake_minimum_required(VERSION 3.5)
 
 set(CMAKE_CXX_STANDARD 11)
 
+if(CMAKE_COMPILER_IS_GNUCXX)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 -w")
+endif()
+
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
