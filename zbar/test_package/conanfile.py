@@ -9,9 +9,6 @@ class ZbarTestConan(ConanFile):
     requires = "zbar/0.10.0@%s/%s" % (username, channel), "OpenCV/3.2.0@ohhi/stable"
     generators = "cmake"
 
-    def configure(self):
-        self.options["OpenCV"].shared = "True"
-
     def build(self):
         cmake = CMake(self)
         cmake.configure(source_dir=self.conanfile_directory, build_dir="./")
