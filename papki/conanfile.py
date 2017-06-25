@@ -38,6 +38,7 @@ class PapkiConan(ConanFile):
     url = "https://github.com/popescu-af/conan-recipes"
     git_url = "https://github.com/igagis/papki.git"
     settings = "os", "compiler", "build_type", "arch"
+    requires = "utki/1.1.7@popescu-af/testing"
     build_policy = "missing"
     options = {"shared": [True, False]}
     default_options = "shared=False"
