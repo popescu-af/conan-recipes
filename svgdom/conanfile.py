@@ -33,8 +33,10 @@ target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
 
 class SvgdomConan(ConanFile):
     name = "svgdom"
+    description = "SVG document object model library in C++"
     version = "0.2.32"
     license = "MIT"
+    exports = "*"
     url = "https://github.com/popescu-af/conan-recipes"
     git_url = "https://github.com/igagis/svgdom.git"
     settings = "os", "compiler", "build_type", "arch"

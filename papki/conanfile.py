@@ -33,8 +33,10 @@ target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
 
 class PapkiConan(ConanFile):
     name = "papki"
+    description = "File system abstraction in C++"
     version = "1.0.39"
     license = "MIT"
+    exports = "*"
     url = "https://github.com/popescu-af/conan-recipes"
     git_url = "https://github.com/igagis/papki.git"
     settings = "os", "compiler", "build_type", "arch"

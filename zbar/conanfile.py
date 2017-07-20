@@ -66,9 +66,11 @@ target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
 
 class ZbarConan(ConanFile):
     name = "zbar"
+    description = "Software suite for reading bar codes from various sources"
     version = "0.10.0"
     short_version = "0.10"
     license = "LGPL 2.1"
+    exports = "*"
     url = "https://github.com/popescu-af/conan-recipes"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"

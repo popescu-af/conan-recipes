@@ -1,8 +1,9 @@
 from conans import ConanFile, CMake, tools
 import os
 
-class PapkiConan(ConanFile):
+class UtkiConan(ConanFile):
     name = "utki"
+    description = "C++ utility library"
     version = "1.1.7"
     license = "MIT"
     exports = "*"

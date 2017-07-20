@@ -33,8 +33,10 @@ target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
 
 class SvgrenConan(ConanFile):
     name = "svgren"
+    description = "SVG renderer library in C++"
     version = "0.4.12"
     license = "MIT"
+    exports = "*"
     url = "https://github.com/popescu-af/conan-recipes"
     git_url = "https://github.com/igagis/svgren.git"
     settings = "os", "compiler", "build_type", "arch"

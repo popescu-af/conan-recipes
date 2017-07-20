@@ -179,8 +179,10 @@ target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
 
 class CairoConan(ConanFile):
     name = "cairo"
+    description = "2D graphics library with support for multiple output devices"
     version = "1.14.8"
     license = "LGPL 2.1"
+    exports = "*"
     url = "https://github.com/popescu-af/conan-recipes"
     settings = "os", "compiler", "build_type", "arch"
     requires = "pixman/0.34.0@popescu-af/testing", "freetype/2.6.3@lasote/stable"

@@ -72,8 +72,10 @@ target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
 
 class PixmanConan(ConanFile):
     name = "pixman"
+    description = "Low-level software library for pixel manipulation"
     version = "0.34.0"
     license = "MIT"
+    exports = "*"
     url = "https://github.com/popescu-af/conan-recipes"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
