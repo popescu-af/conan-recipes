@@ -6,7 +6,7 @@ project(cairo LANGUAGES C)
 cmake_minimum_required(VERSION 3.5)
 
 if(CMAKE_COMPILER_IS_GNUCC)
-  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O2 -w")
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O2 -w -fPIC")
 endif()
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
