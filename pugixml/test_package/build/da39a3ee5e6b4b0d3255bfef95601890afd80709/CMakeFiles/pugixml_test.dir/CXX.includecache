@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alexandru/.conan/data/pugixml/1.8.1/popescu-af/testing/package/81607951755e61cf17149d40bed6aba5b3a079a9/include/pugiconfig.hpp
+
+/home/alexandru/.conan/data/pugixml/1.8.1/popescu-af/testing/package/81607951755e61cf17149d40bed6aba5b3a079a9/include/pugixml.hpp
+pugiconfig.hpp
+/home/alexandru/.conan/data/pugixml/1.8.1/popescu-af/testing/package/81607951755e61cf17149d40bed6aba5b3a079a9/include/pugiconfig.hpp
+stddef.h
+-
+exception
+-
+iterator
+-
+iosfwd
+-
+string
+-
+
+/home/alexandru/private/personal/dev/conan-recipes/pugixml/test_package/pugixml_test.cpp
+iostream
+-
+pugixml.hpp
+-
+

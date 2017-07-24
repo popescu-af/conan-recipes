@@ -1,0 +1,1 @@
+/usr/bin/c++     -m64 -O3 -DNDEBUG        CMakeFiles/pugixml_test.dir/pugixml_test.cpp.o  -o bin/pugixml_test  -L/home/alexandru/.conan/data/pugixml/1.8.1/popescu-af/testing/package/81607951755e61cf17149d40bed6aba5b3a079a9/lib -lpugixml -Wl,-rpath,/home/alexandru/.conan/data/pugixml/1.8.1/popescu-af/testing/package/81607951755e61cf17149d40bed6aba5b3a079a9/lib 

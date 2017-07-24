@@ -48,6 +48,7 @@ class SvgrenConan(ConanFile):
 
     def configure(self):
         self.options["cairo"].shared = True
+        self.options["svgdom"].shared = self.options.shared
 
     def source(self):
         self.run("git clone %s" % (self.git_url))

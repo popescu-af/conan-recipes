@@ -1,0 +1,36 @@
+[settings]
+    arch=x86_64
+    build_type=Release
+    compiler=gcc
+    compiler.libcxx=libstdc++
+    compiler.version=5.4
+    os=Linux
+
+[requires]
+    pugixml/1.Y.Z
+
+[options]
+
+
+[full_settings]
+    arch=x86_64
+    build_type=Release
+    compiler=gcc
+    compiler.libcxx=libstdc++
+    compiler.version=5.4
+    os=Linux
+
+[full_requires]
+    pugixml/1.8.1@popescu-af/testing:81607951755e61cf17149d40bed6aba5b3a079a9
+
+[full_options]
+    pugixml:shared=False
+
+[scope]
+    dev=True
+
+[recipe_hash]
+
+
+[env]
+

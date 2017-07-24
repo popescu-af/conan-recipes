@@ -175,6 +175,13 @@ target_include_directories(${PROJECT_NAME} SYSTEM
   PRIVATE ${CONAN_INCLUDE_DIRS_PIXMAN}/pixman      #Hack for #include <pixman.h> in cairo sources
 )
 target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
+
+if(UNIX)
+  target_link_libraries(${PROJECT_NAME}
+    X11 Xrender Xext X11-xcb xcb xcb-render xcb-shm
+    fontconfig
+  )
+endif()
 """
 
 class CairoConan(ConanFile):
@@ -192,8 +199,8 @@ class CairoConan(ConanFile):
     generators = "cmake"
 
     def configure(self):
-        self.options["freetype"].shared = "True"
         self.options["pixman"].shared = "True"
+        self.options["freetype"].shared = "True"
 
     def source(self):
         self.run("wget https://www.cairographics.org/releases/cairo-%s.tar.xz -O cairo.tar.xz" % self.version)
