@@ -23,7 +23,8 @@ class PugixmlConan(ConanFile):
         os.chdir("pugixml")
         cmake = CMake(self.settings)
         shared = "-DBUILD_SHARED_LIBS=ON" if self.options.shared else ""
-        self.run("cmake . %s %s" % (cmake.command_line, shared))
+        cxxflags = "-DCMAKE_CXX_FLAGS=\"-fPIC\""
+        self.run("cmake . %s %s %s" % (cmake.command_line, shared, cxxflags))
         self.run("cmake --build . %s" % cmake.build_config)
 
     def package(self):
