@@ -73,6 +73,7 @@ class ZbarConan(ConanFile):
     exports = "*"
     url = "https://github.com/popescu-af/conan-recipes"
     settings = "os", "compiler", "build_type", "arch"
+    requires = "libjpeg-turbo/1.5.1@lasote/stable", "libiconv/1.14@lasote/stable"
     build_policy = "missing"
     options = {"shared": [True, False]}
     default_options = "shared=True"
@@ -96,7 +97,8 @@ class ZbarConan(ConanFile):
         self.copy("zbar.h", dst="include/zbar", src="zbar/include")
         self.copy("[A-Z]*.h", dst="include/zbar", src="zbar/include/zbar")
         self.copy("*zbar.lib", dst="lib", keep_path=False)
-        self.copy("*.dll", dst="bin", keep_path=False)
+        self.copy("*.dll", dst="lib", keep_path=False)
+        self.copy("*.dylib", dst="lib", keep_path=False)
         self.copy("*.so", dst="lib", keep_path=False)
         self.copy("*.a", dst="lib", keep_path=False)
 
